@@ -1,0 +1,10 @@
+% if stored_name:
+ <p>The name stored in your cookie is "${stored_name}" .</p>
+ <a href="/cookies/?clear_cookie=yes">Clear cookie</a>
+% else:
+ There is no cookie with the stored name, please provide a name:
+<form method="post">
+Name: <input type="text" name="Name"><br>
+</form>
+% endif
+
