@@ -1,10 +1,10 @@
 from simpleweb import controller, template
 
-
-class Index(object):
+class IndexPage(object):
 
     @controller.publish
     def index(self):
-        return template.render('index.html', world='World!')
+        controller.set_cookie('xpto', 'xpto')
+        return template.render('index.html')
 
-controller.attach(Index(), '/')
+controller.attach('/', IndexPage())
