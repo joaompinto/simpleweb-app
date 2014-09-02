@@ -2,7 +2,6 @@
 from simpleweb import controller, template
 import time
 
-
 class CookiePage(object):
 
     @controller.publish
@@ -15,6 +14,5 @@ class CookiePage(object):
             if not first_visit:
                 controller.set_cookie('first_visit', time.strftime("%x %X"))
         return template.render('cookie.html', first_visit=first_visit)
-
 
 controller.attach('/cookies/', CookiePage())
