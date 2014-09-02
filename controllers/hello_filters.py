@@ -6,8 +6,6 @@ class HelloFiltersPage(object):
 
     @controller.publish
     def index(self):
-        args = {'content': '< This needs HTML filtering>'
-                , 'link': u'Hello Günter'}
-        return template.render('hello_filters.html', **args)
+        return template.render('hello_filters.html', name='Simple+Easy&Nice')
 
 controller.attach('/hello_filters', HelloFiltersPage())

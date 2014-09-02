@@ -1,0 +1,11 @@
+## -*- coding: utf-8 -*-
+<%inherit file="base.html" />
+<%def name="title()">Filters</%def>
+
+##
+
+You can use the url and html escaping filters for in place encoding:<br>
+No enconding: <A HREF="/path_elements/${name}/">Path to ${name}</A><br>
+Encoding:<A HREF="/path_elements/${name | u}/">Path to ${name | h}</A><br>
+<br>
+Check the mako filtering documentation at: <A HREF="http://docs.makotemplates.org/en/latest/filtering.html">http://docs.makotemplates.org/en/latest/filtering.html</A> .
