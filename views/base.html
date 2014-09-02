@@ -9,10 +9,14 @@
     </head>
     <body>
         <div class="header">
-            <div class="header-inner"><h3>SimpleWeb - ${self.title()}<br><a href="/">Home</a></h3></div>
+            <div class="header-inner">
+                <h3><a href="/">Home</a> - SimpleWeb: ${self.title()}</h3>
+            </div>
         </div>
         <div class="content">
-           ${self.body()}
+            <div class="content-inner">
+            ${self.body()}
+            </div>
         </div>
         <div class="footer">
             <div class="footer-inner"></div>
