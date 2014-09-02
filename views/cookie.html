@@ -4,7 +4,7 @@
 ## Page body
 % if first_visit:
 Your first visit to this site was on ${first_visit}.<br>
-<a href="${current_url}?clear_first_visit=yes">Clear first visit cookie</a></p>
+<a href="${controller_url}?clear_first_visit=yes">Clear first visit cookie</a></p>
 % else:
 This is your first visit to this site, curren time was was stored in your browser's cookie.<br>
 Any future visit of this page (test with reload) will show you that information.

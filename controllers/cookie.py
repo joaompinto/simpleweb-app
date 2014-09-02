@@ -15,4 +15,4 @@ class CookiePage(object):
                 controller.set_cookie('first_visit', time.strftime("%x %X"))
         return template.render('cookie.html', first_visit=first_visit)
 
-controller.attach('/cookies/', CookiePage())
+controller.attach('/cookie/', CookiePage())
