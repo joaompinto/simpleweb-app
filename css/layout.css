@@ -1,4 +1,5 @@
 /* Temp styles */
+
 .header, .content, .footer { border: 1px solid black; }
 .content, .footer { border-top: none; }
 
@@ -20,7 +21,7 @@ h3 {
 .content {
     position: relative; /* needed for stacking */
     width: 100%;
-    height: 600px;
+    height: 90%;
 }
 
 .content-inner {
