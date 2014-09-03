@@ -22,18 +22,21 @@ class ViewSourcePage(object):
             code = file.read()
         source = '<b>controllers/%s</b>' % basename(filename)
         source += highlight(code, PythonLexer(), HtmlFormatter(noclasses=True))
+        source += self._dump_views_matching_regex("template.render\('([a-z_]*).", code)
+        controller.set_response('Content-Type', 'text/html')
+        return template.render('view_source.html', content=source)
 
-        for source_name in re.findall("template.render\('([a-z_]*).", code):
+    def _dump_views_matching_regex(self, regex, data):
+        source = ''
+        for source_name in re.findall(regex, data):
             filename = join(dirname(__file__), '..', 'views', source_name+'.html')
-            print filename
             if exists(filename):
                 with open(filename) as file:
                     code = file.read()
                 source += '<b>views/%s</b>' % basename(filename)
                 source += highlight(code, MakoHtmlLexer(), HtmlFormatter(noclasses=True))
-
-        controller.set_response('Content-Type', 'text/html')
-        return template.render('view_source.html', content=source)
-
+                # Displaying sub-templates makes the output too noisy, let's keep it commented
+                #source += self._dump_views_matching_regex('%inherit file="([a-z_]+).', code)
+        return source
 
 controller.attach('/view_source/', ViewSourcePage())
