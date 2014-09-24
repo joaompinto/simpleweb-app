@@ -2,6 +2,7 @@
 from simpleweb import controller, template
 import time
 
+
 class CookiePage(object):
 
     @controller.publish

@@ -1,5 +1,6 @@
 from simpleweb import controller, template
 
+
 class PathElementsPage(object):
 
     @controller.publish

@@ -1,6 +1,7 @@
 ## -*- coding: utf-8 -*-
 from simpleweb import controller, template
 
+
 class HelloPage(object):
 
     @controller.publish
