@@ -13,7 +13,7 @@ class FormPage(object):
             # Form input fields are received as keyword arguments
             # The submit template will use the submitted arguments
             # extended with the sqrt result
-            kwargs['number_sqrt'] = sqrt(float(kwargs['number']))
+            kwargs['number_sqrt'] = str(sqrt(float(kwargs['number'])))
             return template.render('form_submit.html', **kwargs)
 
 

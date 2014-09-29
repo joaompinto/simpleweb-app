@@ -24,7 +24,7 @@ class ViewSourcePage(object):
         source += highlight(code, PythonLexer(), HtmlFormatter(noclasses=True))
         source += self._dump_views_matching_regex("template.render\('([a-z_]*).", code)
         controller.set_response('Content-Type', 'text/html')
-        return template.render('view_source.html', content=source)
+        return template.render('view_source.html', source_name=source_name, content=source)
 
     def _dump_views_matching_regex(self, regex, data):
         source = ''

@@ -2,12 +2,25 @@
 <%inherit file="base.html" />
 <%def name="title()">Index</%def>
 ## Page body
+## Page
+<p class="lead">The Simple Web App Development Framework</p>
+<p>SimpleWeb is a Python web framework in early development. It provides a Model-View-Controller engine
+by integrating some of the best python components for each function.
+The HTTP/Web Application engine is built on top of <a HREF="http://www.cherrypy.org/">CherryPy</a>.
+The view/rendering uses the <a HREF="http://www.makotemplates.org/">Mako</a> templating library.
+The data modeling component is still being defined.
+The sample applications use the HTML, CSS, and JS <a href="http://getbootstrap.com/">Boostrap</a> framework.
+<p>It was packages/tested for the following Platform as a Service (PaaS) cloud offerings:</p>
+<ul>
+    <li><a href="https://cloud.google.com/appengine/">Google Application Engine</a></li>
+</ul>
+<br>
 <ul class="nav nav-pills nav-stacked">
   <li class="active"><a href="#">List of samples</a></li>
     <li><a href="hello/">Hello World!</a></li>
-    <li><a href="hello_filters/">Hello Filters</a></li>
+    <!-- Needs to be reworked: <li><a href="hello_filters/">Hello Filters</a></li> -->
     <li><a href="get_params/?name=Bob">Get parameters</a></li>
-    <li><a href="path_elements/">Handle dynamic path elements</a></li>
+    <li><a href="path_elements/">Dynamic path elements</a></li>
     <li><a href="form/">Simple input form</a></li>
-    <li><a href="cookie/">Get the cookies</a></li>
+    <li><a href="cookie/">Setting and getting browser cookies</a></li>
 </ul>

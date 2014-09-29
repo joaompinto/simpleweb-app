@@ -1,5 +1,5 @@
 ## -*- coding: utf-8 -*-
 <%inherit file="base.html" />
 <%def name="title()">View Source</%def>
-${content}
-
+${content | n}
+<a href="/${source_name}">View Page</a>
