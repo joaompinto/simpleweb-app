@@ -1,6 +1,6 @@
 ## -*- coding: utf-8 -*-
 <%inherit file="base.html" />
-<%def name="title()">Path Elements</%def>
+<%block name="title">Path Elements</%block>
 
 Your current path: /${current_path}<br>
 Walk to <a href="${controller_url}${next_path}/">next</a> .

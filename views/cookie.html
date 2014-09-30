@@ -1,6 +1,6 @@
 ## -*- coding: utf-8 -*-
 <%inherit file="base.html" />
-<%def name="title()">Cookie</%def>
+<%block name="title">Cookie</%block>
 ## Page body
 % if first_visit:
 Your first visit to this site was on ${first_visit}.<br>

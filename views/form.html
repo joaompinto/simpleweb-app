@@ -1,22 +1,18 @@
 ## -*- coding: utf-8 -*-
 <%inherit file="base.html" />
-<%def name="title()">Form</%def>
-<form role="form" method="post">
-  <div class="form-group row">
-    <div class="col-xs-6">
-        <label>Name</label>
-        <input type="text" class="form-control col-lg-3" name="name" placeholder="Type your name">
-    </div>
-  </div>
-  <div class="form-group row">
-      <div class="col-xs-2">
-            <label>Number</label>
-            <input type="text" class="form-control" name="number" placeholder="Type a number">
-        </div>
-  </div>
-  <div class="form-group row">
-    <div class="col-xs-1">
-        <button type="submit" class="btn btn-default">Submit</button>
-    </div>
-  </div>
-</form>
+<%block name="title">Form</%block>
+<%block name="extra_js_files"><script src="/js/jqBootstrapValidation.js"></script></%block>
+<!--- Form definition -->
+${FormBuild("vertical", [
+    { "label" : "Name", "placeholder": "Type your name",
+        "type" : "text", "view_size" : 6 , "name" : "name",  "required" : True },
+    { "label" : "Number",  "placeholder": "Type a number",
+        "type" : "number", "view_size" : 2 , "name" : "number", "required" : True  },
+    { "label" : "Submit", "type" : "submit", "view_size" : 1 }
+]) | n } <%doc>You must use |n for "no filter", to produce raw html output </%doc>
+<!--- Activate client side input validation, managed by jqBootstrapValidation -->
+<%block name="script">
+<script>
+    $(function () { $("input").not("[type=submit]").jqBootstrapValidation(); } );
+</script>
+</%block>

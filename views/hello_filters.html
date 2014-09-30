@@ -1,9 +1,6 @@
 ## -*- coding: utf-8 -*-
 <%inherit file="base.html" />
-<%def name="title()">Filters</%def>
-
-##
-
+<%block name="title">Filters</%block>
 You can use the url and html escaping filters for in place encoding:<br>
 No enconding: <A HREF="/path_elements/${name}/">Path to ${name}</A><br>
 Encoding:<A HREF="/path_elements/${name | u}/">Path to ${name | h}</A><br>

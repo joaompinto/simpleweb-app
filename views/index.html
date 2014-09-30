@@ -1,7 +1,6 @@
 ## -*- coding: utf-8 -*-
 <%inherit file="base.html" />
-<%def name="title()">Index</%def>
-## Page body
+<%block name="title">Home</%block>
 ## Page
 <p class="lead">The Simple Web App Development Framework</p>
 <p>SimpleWeb is a Python web framework in early development. It provides a Model-View-Controller engine
@@ -24,4 +23,6 @@ The sample applications use the HTML, CSS, and JS <a href="http://getbootstrap.c
     <li><a href="form/">Simple input form</a></li>
     <li><a href="cookie/">Setting and getting browser cookies</a></li>
 </ul>
-<p class="bg-info">The full source code for this project is available <a href="https://github.com/joaompinto/simpleweb-app">here</a>.<p>
+<div class="alert alert-success" role="alert">
+  The full source code for this project is available from <a  class="alert-link" href="https://github.com/joaompinto/simpleweb-app">GitHub</a> .
+</div>

@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>SimpleWeb - ${self.title()}</title>
+    <title>SimpleWeb - <%block name="title"/></title>
 
 
     <!-- Bootstrap core CSS -->
@@ -58,5 +58,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="/js/jquery-1.11.1.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <%block name="extra_js_files"/>
+    <%block name="script"/>
   </body>
 </html>
